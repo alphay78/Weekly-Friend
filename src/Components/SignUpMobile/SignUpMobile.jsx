@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import "./SignUp.css";
+import "./SignUpMobile.css";
 
-const Signup = () => {
+const SignUpMobile = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
+  let pass = "";
 
   return (
     <div className="signup-container">
@@ -33,10 +34,10 @@ const Signup = () => {
               className="password-toggle"
               onClick={togglePasswordVisibility}
             >
-              {passwordVisible
+              {/* {passwordVisible
                 ? (pass = "../../../public/eyeSee.svg")
                 : (pass = "../../../public/eyeHide.svg")}
-              <img src={pass} alt="hide-see-image" />
+              <img src={pass} alt="hide-see-image" /> */}
             </span>
           </div>
           <a href="/signin" className="back-to-signin">
@@ -51,4 +52,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUpMobile;
