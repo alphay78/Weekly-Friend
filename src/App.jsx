@@ -1,9 +1,9 @@
-// import React from "react";
+import Signup from "./Components/SignUpMobile/SignUp";
 
 function App() {
   return (
     <>
-      <div>this is app</div>
+      <Signup />
     </>
   );
 }
