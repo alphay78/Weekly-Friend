@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import "./SignUpMobile.css";
+import "./SignUp.css";
 
-const SignUpMobile = () => {
+const SignUp = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
     setPasswordVisible(!passwordVisible);
   };
-  let pass = "";
 
   return (
     <div className="signup-container">
+      <h1 id="weeklyFriendsSignUp">Weekly Friends</h1>
       <div className="signup-card">
         <div className="logo">
           <img
@@ -20,8 +20,13 @@ const SignUpMobile = () => {
           />
           <h1 className="title">Weekly Friends</h1>
           <p className="subtitle">Philip 2:2</p>
+          <p className="verse">
+             ”Then make my joy complete by being like-minded, having the same
+            love, being one in spirit and of one mind.”
+          </p>
         </div>
         <form>
+          <h2 className="createAnAccount">Create an Account</h2>
           <input type="text" placeholder="Full Name" className="signup-input" />
           <input type="email" placeholder="Email" className="signup-input" />
           <div className="password-container">
@@ -34,10 +39,11 @@ const SignUpMobile = () => {
               className="password-toggle"
               onClick={togglePasswordVisibility}
             >
-              {/* {passwordVisible
-                ? (pass = "../../../public/eyeSee.svg")
-                : (pass = "../../../public/eyeHide.svg")}
-              <img src={pass} alt="hide-see-image" /> */}
+              {passwordVisible ? (
+                <img src="/eyeSee.svg" alt="hide password" />
+              ) : (
+                <img src="/eyeHide.svg" alt="show password" />
+              )}
             </span>
           </div>
           <a href="/signin" className="back-to-signin">
@@ -52,4 +58,4 @@ const SignUpMobile = () => {
   );
 };
 
-export default SignUpMobile;
+export default SignUp;
