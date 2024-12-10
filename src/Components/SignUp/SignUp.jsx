@@ -14,7 +14,7 @@ const SignUp = () => {
       <div className="signup-card">
         <div className="logo">
           <img
-            src="../../../public/bible.png"
+            src="/bible.png"
             alt="Weekly Friends Logo"
             className="logo-image"
           />
