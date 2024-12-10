@@ -1,9 +1,9 @@
-import Signup from "./Components/SignUpMobile/SignUp";
+import SignUpMobile from "./Components/SignUpMobile/SignUpMobile";
 
 function App() {
   return (
     <>
-      <Signup />
+      <SignUpMobile />
     </>
   );
 }
